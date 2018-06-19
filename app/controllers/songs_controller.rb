@@ -10,9 +10,9 @@ class SongsController < ApplicationController
     else
       @songs = Song.all
     end
-          rescue ActiveRecord::RecordNotFound
-          flash[:alert] = "Artist not found."
-          redirect_to artists_path
+      rescue ActiveRecord::RecordNotFound
+      flash[:alert] = "Artist not found."
+      redirect_to artists_path
   end
 
   def show
